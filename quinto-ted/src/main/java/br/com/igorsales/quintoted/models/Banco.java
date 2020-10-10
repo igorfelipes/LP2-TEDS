@@ -24,20 +24,20 @@ public class Banco {
         this.razaoSocial = razaoSocial;
     }
 
-    @Override
-    public String toString() {
-        return "Banco{" +
-                "razaoSocial='" + razaoSocial + '\'' +
-                ", CNPJ='" + CNPJ + '\'' +
-                '}';
-    }
-
     public String getCNPJ() {
         return CNPJ;
     }
 
     public void setCNPJ(String CNPJ) {
         this.CNPJ = CNPJ;
+    }
+
+    @Override
+    public String toString() {
+        return "Banco{" +
+                "razaoSocial='" + razaoSocial + '\'' +
+                ", CNPJ='" + CNPJ + '\'' +
+                '}';
     }
 
     public Conta getContaMaxSaldo(ArrayList<Conta> contas ){
