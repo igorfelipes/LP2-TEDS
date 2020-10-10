@@ -30,6 +30,16 @@ public class App {
          Conta conta;
          conta = banco.getContaMaxSaldo(contas);
 
+        String msg = "<html>CONTA DE MAIOR SALDO<br> Número da conta: " + conta.getNumero() +"<br>" + "Saldo: " +
+                conta.getSaldo();
+
+        JOptionPane optionPane = new JOptionPane();
+        optionPane.setMessage(msg);
+        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = optionPane.createDialog(null, "Banco");
+        dialog.setVisible(true);
+
+
         System.out.println("Conta de maior saldo: "+ conta.toString());
 
 
